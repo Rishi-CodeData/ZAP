@@ -1,6 +1,9 @@
 CREATE OR REPLACE VIEW reconciliation_summary AS
 SELECT
+    applicant_id,
     name,
+    date_of_birth,
+    address,
     COUNT(DISTINCT source) AS bureau_count,
     MIN(normalized_score) AS min_score,
     MAX(normalized_score) AS max_score,
@@ -10,4 +13,4 @@ SELECT
         ELSE 'incomplete'
     END AS status
 FROM unified_applicants
-GROUP BY name;
+GROUP BY applicant_id, name, date_of_birth, address;

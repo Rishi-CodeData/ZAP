@@ -2,7 +2,9 @@ CREATE OR REPLACE TABLE bureau1_raw (
     applicant_id STRING,
     full_name STRING,
     score INT,
-    report_date DATE
+    report_date DATE,
+    date_of_birth DATE,
+    address STRING
 );
 
 COPY INTO bureau1_raw

@@ -1,5 +1,7 @@
-applicant_id,full_name,score,report_date
-101,John Doe,720,2026-06-01
-102,Jane Smith,680,2026-06-02
-103,Arjun Patel,590,2026-06-03
-104,Maria Lopez,810,2026-06-04
+applicant_id,full_name,score,report_date,date_of_birth,address
+101,John Doe,720,2026-06-01,1985-03-12,"123 Main St"
+102,Jane Smith,680,2026-06-02,1990-07-25,"456 Oak Ave"
+103,Arjun Patel,590,2026-06-03,1988-11-09,"789 Pine Rd"
+104,Maria Lopez,810,2026-06-04,1982-02-20,"321 Maple Blvd"
+105,David Kim,640,2026-06-05,1987-09-14,"12 Cedar Lane"
+106,Ananya Rao,700,2026-06-06,1993-08-11,"55 Lotus Street"

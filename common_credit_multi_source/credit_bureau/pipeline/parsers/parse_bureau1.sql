@@ -4,5 +4,7 @@ SELECT
     full_name AS name,
     (score::FLOAT) / 850.0 AS normalized_score,
     report_date,
+    date_of_birth,
+    address,
     'bureau1' AS source
 FROM bureau1_raw;

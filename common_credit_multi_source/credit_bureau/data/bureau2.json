@@ -3,24 +3,48 @@
     "id": "A-201",
     "name": "John Doe",
     "credit_rating": 82,
-    "date_reported": "2026-06-01"
+    "date_reported": "2026-06-01",
+    "date_of_birth": "1985-03-12",
+    "address": "123 Main St"
   },
   {
     "id": "A-202",
     "name": "Jane Smith",
     "credit_rating": 75,
-    "date_reported": "2026-06-02"
+    "date_reported": "2026-06-02",
+    "date_of_birth": "1990-07-25",
+    "address": "456 Oak Ave"
   },
   {
     "id": "A-203",
     "name": "Arjun Patel",
     "credit_rating": 65,
-    "date_reported": "2026-06-03"
+    "date_reported": "2026-06-03",
+    "date_of_birth": "1988-11-09",
+    "address": "789 Pine Rd"
   },
   {
     "id": "A-204",
     "name": "Maria Lopez",
     "credit_rating": 90,
-    "date_reported": "2026-06-04"
+    "date_reported": "2026-06-04",
+    "date_of_birth": "1982-02-20",
+    "address": "321 Maple Blvd"
+  },
+  {
+    "id": "A-205",
+    "name": "Fatima Khan",
+    "credit_rating": 88,
+    "date_reported": "2026-06-05",
+    "date_of_birth": "1992-01-30",
+    "address": "77 Rose Street"
+  },
+  {
+    "id": "A-206",
+    "name": "Carlos Mendes",
+    "credit_rating": 70,
+    "date_reported": "2026-06-06",
+    "date_of_birth": "1984-12-02",
+    "address": "44 Palm Avenue"
   }
 ]

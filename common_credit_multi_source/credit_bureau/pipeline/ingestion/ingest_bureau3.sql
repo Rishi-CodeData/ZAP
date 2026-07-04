@@ -2,7 +2,9 @@ CREATE OR REPLACE TABLE bureau3_raw (
     cust_id STRING,
     cust_name STRING,
     risk_score FLOAT,
-    report_dt DATE
+    report_dt DATE,
+    date_of_birth DATE,
+    address STRING
 );
 
 COPY INTO bureau3_raw
