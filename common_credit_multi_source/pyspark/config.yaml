@@ -1,0 +1,24 @@
+version: "2.0"
+pipeline_name: "bureau_medallion_pipeline"
+
+# Base S3 paths for our lakehouse layers
+lakehouse_layers:
+  bronze_path: "s3://your-fintech-bucket/bronze/"
+  silver_path: "s3://your-fintech-bucket/silver/"
+  gold_path: "s3://your-fintech-bucket/gold/"
+
+sources:
+  bureau_a:
+    format: "json"
+    s3_raw_landing: "s3://your-fintech-bucket/landing/bureau_a/"
+  bureau_b:
+    format: "csv"
+    options:
+      header: "true"
+      inferSchema: "true"
+    s3_raw_landing: "s3://your-fintech-bucket/landing/bureau_b/"
+  bureau_c:
+    format: "xml"
+    options:
+      rowTag: "Applicant"
+    s3_raw_landing: "s3://your-fintech-bucket/landing/bureau_c/"

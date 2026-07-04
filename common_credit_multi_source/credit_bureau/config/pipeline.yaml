@@ -1,0 +1,36 @@
+sources:
+  - name: bureau1_raw
+    type: s3
+    format: csv
+    path: @my_s3_stage/bureau1/bureau1.csv
+    file_format: (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY='"' SKIP_HEADER=1)
+
+  - name: bureau2_raw
+    type: s3
+    format: json
+    path: @my_s3_stage/bureau2/bureau2.json
+    file_format: (TYPE = JSON)
+
+  - name: bureau3_raw
+    type: s3
+    format: parquet
+    path: @my_s3_stage/bureau3/
+    file_format: (TYPE = PARQUET)
+
+steps:
+  - name: ingest_bureau1
+    script: pipeline/ingestion/ingest_bureau1.sql
+  - name: ingest_bureau2
+    script: pipeline/ingestion/ingest_bureau2.sql
+  - name: ingest_bureau3
+    script: pipeline/ingestion/ingest_bureau3.sql
+  - name: parse_bureau1
+    script: pipeline/parsers/parse_bureau1.sql
+  - name: parse_bureau2
+    script: pipeline/parsers/parse_bureau2.sql
+  - name: parse_bureau3
+    script: pipeline/parsers/parse_bureau3.sql
+  - name: unify_schema
+    script: pipeline/unify_schema.sql
+  - name: reconciliation
+    script: pipeline/reconciliation.sql
